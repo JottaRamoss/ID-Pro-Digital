@@ -1,0 +1,236 @@
+/* 1. CONFIGURAÇÕES GERAIS E VARIÁVEIS - ATUALIZADAS PARA ID PRO DIGITAL */
+:root {
+    --primary-yellow: #FFD700; /* Amarelo Vibrante */
+    --deep-black: #000000;      /* Preto */
+    --soft-black: #1a1a1a;      /* Escuro suave */
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    color: #444; 
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+/* 2. TOPBAR E NAVBAR */
+.topbar { 
+    background: var(--deep-black); 
+    color: var(--white); 
+    padding: 10px 0; 
+    font-size: 13px; 
+}
+.topbar i { color: var(--primary-yellow); }
+
+.navbar { 
+    background: var(--white); 
+    transition: var(--transition); 
+    padding: 15px 0; 
+    border-bottom: 3px solid var(--primary-yellow);
+}
+.navbar.scrolled { 
+    padding: 8px 0; 
+    background: rgba(255, 255, 255, 0.98); 
+}
+
+.text-blue, .text-black { color: var(--deep-black) !important; }
+.text-orange, .text-yellow { color: var(--primary-yellow) !important; }
+
+/* 3. COMPONENTES DE IMPACTO (HERO) */
+.hero-main, .hero-banner, .partnership-hero {
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-main { height: 85vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/131.jpeg'); }
+.hero-banner { height: 450px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80'); }
+.partnership-hero { padding: 100px 0; background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80'); }
+
+/* 4. BOTÕES PERSONALIZADOS */
+.btn-orange, .btn-yellow { 
+    background-color: var(--primary-yellow); 
+    border: none; 
+    color: var(--deep-black) !important; 
+    font-weight: 600;
+    transition: var(--transition);
+}
+.btn-orange:hover, .btn-yellow:hover { 
+    background-color: var(--deep-black); 
+    color: var(--primary-yellow) !important;
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.btn-orange-lg {
+    background: var(--primary-yellow);
+    color: var(--deep-black);
+    padding: 16px 35px;
+    font-weight: 700;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-blue-outline {
+    border: 2px solid var(--deep-black);
+    color: var(--deep-black);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.btn-blue-outline:hover {
+    background: var(--deep-black);
+    color: var(--primary-yellow);
+}
+
+/* 5. CARDS E VITRINE */
+.card-service, .product-item, .product-card {
+    transition: var(--transition);
+    border-radius: 15px;
+    background: var(--white);
+    border: 1px solid #eee;
+}
+.card-service:hover, .product-item:hover, .product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-yellow);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.price { font-size: 24px; font-weight: 800; color: var(--deep-black); }
+.bg-light-orange { background-color: rgba(255, 215, 0, 0.1); }
+.border-orange-2 { border: 2px solid var(--primary-yellow) !important; }
+
+/* 6. FORMULÁRIOS */
+.form-control, .form-select {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+.form-control:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.1);
+}
+
+/* 7. FOOTER */
+.footer-site, .footer-dark, .footer-premium {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: var(--white);
+    padding: 60px 0 30px;
+    border-top: 5px solid var(--primary-yellow);
+}
+.footer-site a, .footer-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: var(--transition); }
+.footer-site a:hover, .footer-links a:hover { color: var(--primary-yellow); transform: translateX(5px); }
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    color: var(--primary-yellow);
+}
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-yellow);
+}
+
+/* 8. UTILITÁRIOS */
+.bg-blue, .bg-black { background-color: var(--deep-black) !important; }
+.orange-divider, .yellow-divider { width: 60px; height: 4px; background: var(--primary-yellow); margin: 15px auto; }
+
+.social-link, .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.social-link:hover, .social-links a:hover {
+    background: var(--primary-yellow);
+    color: var(--deep-black);
+    transform: translateY(-3px);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* HEADERS ESPECÍFICOS */
+.header-contato-premium, .header-suporte-premium {
+    background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    border-bottom: 4px solid var(--primary-yellow);
+}
+
+.featured-card {
+    border: 2px solid var(--primary-yellow) !important;
+}
+
+.featured-badge {
+    background: var(--primary-yellow);
+    color: var(--deep-black);
+}
+/* Estilos para a página de Atendimento */
+.bg-yellow-light {
+    background-color: rgba(255, 204, 0, 0.1);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.x-small {
+    font-size: 0.75rem;
+}
+
+.alert-warning {
+    border-left: 4px solid var(--yellow-pro) !important;
+}
